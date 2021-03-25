@@ -6,10 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&family=Lato:wght@900&family=Roboto&display=swap" rel="stylesheet">
+
+    <!-- Jquery Cdn  -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+    <!-- Gsap -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TimelineLite.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenLite.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/CSSPlugin.min.js"></script>
+
     <title>Electricity Company | @rohit_virkud</title>
     <style>
         *{
@@ -466,16 +472,16 @@
         </div>
 
         <div class="social-icons">
-                  <a href="https://www.facebook.com/"><img src="facebook.png" alt="facebook-logo" class="fb"/></a>
-                  <a href="https://www.twitter.com/"><img src="twitter.png" alt="twitter-logo" class="twit"></a>
-                  <a href="https://www.youtube.com/"><img src="youtube.png" alt="youtube-logo" class="yt"></a>
-              </div>
+                  <a href="https://m.facebook.com/DEHGreece/" target="_blank"><img src="facebook.png" alt="facebook-logo" class="fb"/></a>
+                  <a href="https://mobile.twitter.com/dei_gr" target="_blank"><img src="twitter.png" alt="twitter-logo" class="twit"></a>
+                  <a href="https://m.youtube.com/user/deigr" target="_blank"><img src="youtube.png" alt="youtube-logo" class="yt"></a>
+        </div>
 
               
             
             <a class="translator-btn" >
                   <h3>ENG</h3>
-                  <img src="Arrow   Down Circle.png"/>
+                  <img src="Arrow   Down Circle.png" alt="arrow-img"/>
             </a>
           
   
@@ -510,35 +516,35 @@
             <div class="buttons-wrapper">
                 <div class="buttons-container">
                     <a href="tel:+30 697 000 6113">
-                    <img src="mobile icon.png">
+                    <img src="mobile icon.png" alt="mobile-icon">
                     <p>
                        <span>+30 697 000 6113</span>
                     </p>
                     </a>
 
                     <a href="tel:+30 210 529276">
-                        <img src="mobile icon-1.png">
+                        <img src="mobile icon-1.png" alt="mobile-icon">
                         <p>
                             <span>+30 210 529276</span>
                         </p>
                     </a>
 
                     <a href="mailto:k.grompanopoulos@dei.com.gr"  data-swiper-parallax="-200">
-                        <img src="email icon.png">
+                        <img src="email icon.png" alt="email-icon">
                         <p>
                             <span>k.grompanopoulos@dei.com.gr</span>
                         </p>
                     </a>
 
                     <a href="http://www.dei.gr/" target="_blank"> 
-                        <img src="web icon.png">
+                        <img src="web icon.png" alt="web-icon">
                         <p>
                             <span>www.dei.gr</span>
                         </p>
                     </a>
 
                     <a href="#!" >
-                        <img src="location icon.png">
+                        <img src="location icon.png" alt="location-icon">
                         <p>
                         <span id="addr">ΔΗΜΟΣΙΑ ΕΠΙΧΕΙΡΗΣΗ ΗΛΕΚΤΡΙΣΜΟΥ Α.Ε. 3ης Σεπτεμβρίου 22 – 10432, Αθήνα</span>
                         </p>
@@ -561,7 +567,7 @@
             
             <div class="translator-btn" onclick="languageTranslator()" >
                   <h3 id="translator-txt">ENG</h3>
-                  <img src="Arrow   Down Circle.png"/>
+                  <img src="Arrow   Down Circle.png" alt="arrow-img"/>
             </div>
           
 
@@ -572,24 +578,22 @@
 
         <div class="swiper-slide screen-02">
               <div class="share-slide" id="share-slide">
-
-
-              <img src="close icon.png" class="close-icon" onclick="closeTheShare()" >
+              <img src="close icon.png" alt="close-icon"  class="close-icon" onclick="closeTheShare()" >
               <div class="share-slide-share-icons">
                   <h2 class="share-headline">Share My Card</h2>
                   <div class="icon-grid">
-                      <a href="#" ><img src="sms.png"></a>
-                      <a href="#"><img src="cs.png"></a>
-                      <a href="#"><img src="whatsapp.png"></a>
-                      <a href="#"><img src="dropbox 187.png"></a>
-                      <a href="#"><img src="fb9.png"></a>
-                      <a href="#"><img src="telegram 191.png"></a>
-                      <a href="#"><img src="twitter8.png"></a>
-                      <a href="#"><img src="linkedin3.png"></a>
+                      <a href="#" ><img src="sms.png" alt="sms-img"></a>
+                      <a href="#"><img src="cs.png" alt="cs-img"></a>
+                      <a href="#"><img src="whatsapp.png" alt="whatsapp-img"></a>
+                      <a href="#"><img src="dropbox 187.png" alt="dropbox-img"></a>
+                      <a href="#"><img src="fb9.png" alt="fb-img"></a>
+                      <a href="#"><img src="telegram 191.png" alt="tel-img"></a>
+                      <a href="#"><img src="twitter8.png" alt="twit-img"></a>
+                      <a href="#"><img src="linkedin3.png" alt="linkedin-img"></a>
                   </div>
                   <h2 class="scan-and-save-txt" >Scan And Save</h2>
                   <div class="qr-code-container">
-                      <img src="qr.png">
+                      <img src="qr.png" alt="qr-img">
                   </div>
               </div>
   
@@ -613,7 +617,7 @@
             
 
             
-              
+         /* Gsap timeline */     
             const t1 = new TimelineLite({paused:true});
             const t2 = new TimelineLite({paused:true});
 
@@ -730,7 +734,6 @@
             }
 
 
-
             function closeTheShare()
             {
             
@@ -738,7 +741,7 @@
                 
             }
            
-
+            /* jquery loader */
 
             $('document').ready(function(e){
 
@@ -746,7 +749,9 @@
             
             });
 
+ 
 
+              /* translate text function */
 
             function languageTranslator()
             {
