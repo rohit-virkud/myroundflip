@@ -128,7 +128,8 @@
             font-family: 'Roboto', sans-serif;
             font-size: min(3.8vw, 1.8vh);
             overflow: hidden;
-            
+             width: 80%;
+
         }
         .p-mg-top
         {
@@ -201,7 +202,7 @@
             background-color: #16A8E1;
             color:white;
             margin-top:min(8vw,4vh);
-            margin-left: min(5.8vw,2vh);
+            margin-left: min(5.8vw,3.8vh);
             font-family: 'Lato', sans-serif;
             font-size: min(3.5vw,1.5vh);
             font-weight: 900;    
@@ -213,11 +214,11 @@
         .social-icons
         {
             position: absolute;
-            margin-left: min(5.8vw,1.8vh);
+            margin-left:  min(6.5vw,4.2vh);
            
             bottom: 0;
             left:0;
-            padding-bottom: min(1vw,1vh);
+            padding-bottom: min(2vw,2vh);
             
         }
 
@@ -292,7 +293,7 @@
             {
                 position:fixed;
                 width: 100%;
-                height: 100vh;
+                height: 100%;
                 background-color: white;
                 display: flex;
                 justify-content: center;
@@ -303,100 +304,118 @@
                
                
             }
-            .logo-name
+
+            .loader-container h3
             {
-                width: 200px;
-                height: 200px;
-                position: absolute;
+                 font-size: min(3.5vw,3vh);
             }
+            
             .dual-ring {
               display: inline-block;
-              width: 200px;
-              height: 200px;
+              width: min(38vw,20vh);
+              height: min(38vw,20vh);
               display: flex;
               justify-content: center;
               align-items: center;
 
             }
+            .logo-name
+            {
+                width: min(38vw,20vh);
+                height: min(38vw,20vh);
+                position: absolute;
+            }
         
           .loading-tag
           {
-              margin-top: 20px;
+              margin-top: min(5vw,5vh);
           }
           .loading-tag-two
           {
-              margin-top: 10px;
+              margin-top: min(1.8vw,1vh);
           }
           .loading-tag-three
           {
-              margin-top: 10px;
+              margin-top: min(1.8vw,1vh);
               color: #16A8E1;
           }
 
       
        /*share slide*/
+       /*share slide*/
         .share-slide
         {
-           
+            position: fixed;
             width: 100%;
-            height: 100%;
+            height: 100vh;
             overflow: hidden;
             background-color: white;
             mix-blend-mode: normal;
             backdrop-filter: blur(30px);
+            z-index: -222;
             
             
         }
-
         .share-slide .close-icon
         {
             position: absolute;
-            top: 5%;
-            right: 5.5%;
+            top:4%;
+            right: 7%;
             width: min(5vw,3vh);
             height: min(5vw,3vh);
         }
         .share-slide-share-icons
         {
-            width: 100%;
-            height: 100%;
+
             display: flex;
             flex-direction: column;
-            justify-content: center;
             align-items: center;
+            flex-shrink: 0;
+            position: fixed;
+            top: 50%;
+            left: 50%; 
+            /* bring your own prefixes */
+            transform: translate(-50%, -50%);
            
         }
-        .share-slide-share-icons h2, .qr-code-wrapper h2
+        .share-slide-share-icons h2 , .scan-and-save-txt
         {
             font-size: min(5vw,2.5vh);
-            color: #16A8E1;
+            color: #1D4B7A;
+            margin-bottom:  min(4vw,3vh);
+
+            
         }
+        .scan-and-save-txt
+        {
+            margin-bottom:  min(4vw,4vh);
+        }
+
+
+        
         .icon-grid
         {
-
             display: grid;
-            width: 80%;
+            width: 100%;
             grid-template-columns: 11vw 11vw 11vw 11vw;
             grid-gap: min(2vw,1vh);
-            margin-top: min(2vw,1.2vh);
+            
             justify-content: center;
+            
         }
         .icon-grid a
         {
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-shrink: 0;
         }
         .icon-grid img
         {
             width: min(11vw,5vh);
             height: min(11vw,5vh);
         }
-        .scan-and-save-txt
-        {
-            margin-top: min(30vw,10vh);
-            
-        }
+        
         .qr-code-wrapper
         {
             width: 100%;
@@ -404,16 +423,16 @@
             
             display: flex;
             flex-direction: column;
-            color: #757575;
+            flex-shrink: 0;
+            color: #1D4B7A;
             align-items: center;
         }
         .qr-code-container img
         { 
-            width: min(40vw,20vh);
-            height: min(40vw,20vh);
-            margin-top: min(2vw,1vh); 
+            width: min(30vw,20vh);
+            height: min(30vw,20vh);
+           
         }
-
 
 
           
@@ -483,8 +502,8 @@
                 <h1>
                    <span>Konstantinos D. Grompanopoulos</span>
                 </h1>
-                <p class="p-mg-top">Director of Production Assets</p>
-                <p>Withdrawal Management Department</p>
+                <p class="p-mg-top">Director of Production Assets Withdrawal Management Department</p>
+                <!--<p>Withdrawal Management Department</p>-->
             </div>
            
             <div class="buttons-wrapper">
@@ -550,14 +569,14 @@
 
     
 
-       <div class="swiper-slide screen-02">
+        <div class="swiper-slide screen-02">
               <div class="share-slide" id="share-slide">
-              
-              <img src="close icon.png" class="swiper-button-prev close-icon" onclick="closeTheShare()" >
-              
+
+
+              <img src="close icon.png" class="close-icon" onclick="closeTheShare()" >
               <div class="share-slide-share-icons">
-                  <h2 class="share-headline">SHARE MY CARD</h2>
-                  <div class="icon-grid" >
+                  <h2 class="share-headline">Share My Card</h2>
+                  <div class="icon-grid">
                       <a href="#" ><img src="sms.png"></a>
                       <a href="#"><img src="cs.png"></a>
                       <a href="#"><img src="whatsapp.png"></a>
@@ -567,19 +586,22 @@
                       <a href="#"><img src="twitter8.png"></a>
                       <a href="#"><img src="linkedin3.png"></a>
                   </div>
-                  <h2 class="scan-and-save-txt">SCAN AND SAVE</h2>
+                  <h2 class="scan-and-save-txt" style=" margin-top: 30%;">Scan And Save</h2>
                   <div class="qr-code-container">
                       <img src="qr.png">
                   </div>
               </div>
-            </div>
-       </div>
+  
+              </div>
+        </div>
 
-
+    
 
 
     </div>
-  </div>     
+    </div>
+
+
      
     
          
