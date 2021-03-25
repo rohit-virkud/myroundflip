@@ -128,7 +128,7 @@
             font-family: 'Roboto', sans-serif;
             font-size: min(3.8vw, 1.8vh);
             overflow: hidden;
-             width: 80%;
+             width: 90%;
 
         }
         .p-mg-top
@@ -502,10 +502,10 @@
             </div>
 
             <div class="text-wrapper">
-                <h1>
-                   <span>Konstantinos D. Grompanopoulos</span>
+                <h1 id="name-heading">
+                   <span>Κωνσταντίνος Δ. Γρομπανόπουλος</span>
                 </h1>
-                <p class="p-mg-top">Director of Production Assets Withdrawal Management Department</p>
+                <p class="p-mg-top" id="post">Διευθυντής Διεύθυνσης Διαχείρισης Αποσυρόμενων Μέσων Παραγωγής</p>
                 <!--<p>Withdrawal Management Department</p>-->
             </div>
            
@@ -542,7 +542,7 @@
                     <a href="#!" >
                         <img src="location icon.png">
                         <p>
-                        <span>22, 3rd Septemvriou st., Athens GR-104 32</span>
+                        <span id="addr">ΔΗΜΟΣΙΑ ΕΠΙΧΕΙΡΗΣΗ ΗΛΕΚΤΡΙΣΜΟΥ Α.Ε. 3ης Σεπτεμβρίου 22 – 10432, Αθήνα</span>
                         </p>
                     </a>
                    
@@ -561,10 +561,10 @@
 
               
             
-            <a class="translator-btn" >
-                  <h3>ENG</h3>
+            <div class="translator-btn" onclick="languageTranslator()" >
+                  <h3 id="translator-txt">ENG</h3>
                   <img src="Arrow   Down Circle.png"/>
-            </a>
+            </div>
           
 
         </div>
@@ -745,9 +745,34 @@
             $('document').ready(function(e){
 
                 $(".loader-container").delay( 3000 ).fadeOut('slow');
+            
+            });
+
+
+
+            function languageTranslator()
+            {
+                const translatorTxt = document.getElementById('translator-txt');
                 
 
-            });
+                if( translatorTxt.innerHTML === 'ENG')
+                {
+                
+                document.getElementById('name-heading').innerHTML= 'Konstantinos D. Grompanopoulos';
+                document.getElementById('post').innerHTML= 'Director of Production Assets Withdrawal Management Department ';
+                document.getElementById('addr').innerHTML= 'PUBLIC POWER CORPORATION S.A. 22, 3rd Septemvriou st., Athens GR-104 32';
+                translatorTxt.innerHTML = 'GRE';
+
+                }else{
+
+                document.getElementById('name-heading').innerHTML= 'Κωνσταντίνος Δ. Γρομπανόπουλος';
+                document.getElementById('post').innerHTML= 'Διευθυντής Διεύθυνσης Διαχείρισης Αποσυρόμενων Μέσων Παραγωγής';
+                document.getElementById('addr').innerHTML= 'ΔΗΜΟΣΙΑ ΕΠΙΧΕΙΡΗΣΗ ΗΛΕΚΤΡΙΣΜΟΥ Α.Ε. 3ης Σεπτεμβρίου 22 – 10432, Αθήνα';
+                translatorTxt.innerHTML = 'ENG';
+
+                }
+
+            }
 
 
             
