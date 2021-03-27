@@ -367,6 +367,7 @@
             right: 7%;
             width: min(5vw,3vh);
             height: min(5vw,3vh);
+            opacity: 0;
         }
         .share-slide-share-icons
         {
@@ -626,7 +627,6 @@
 
             t1.to('.screen-01',1,{
                 rotation: -90,
-
                 ease: Power2.easeOut,
             })
             .fromTo('.screen-02',1,{
@@ -688,6 +688,13 @@
                 opacity: 1,
                 x: 0,
             },'-= 1.5')
+            .fromTo('.close-icon',0.8,{
+                opacity: 0,
+                ease: Power2.easeOut,
+            },{
+                opacity: 1,
+            })
+
             
 
             
@@ -751,7 +758,7 @@
                 }
                  t2.play(0);
             })
-           
+          
            
             /* jquery loader */
 
